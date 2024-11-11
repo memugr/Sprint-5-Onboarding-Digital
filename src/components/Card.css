@@ -42,7 +42,11 @@
     margin-bottom: 3ch;
 }
 
-.card-footer button {
+.card-footer .button-group {
+    align-items: center;
+}
+
+.button-group .btn {
     width: 40px;
     height: 40px;
     display: flex;
@@ -61,7 +65,7 @@
 .dot {
     width: 5px;
     height: 5px;
-    margin: 0 5px;
+    margin: 0 4px;
     background-color: #D3D3D3;
     border-radius: 50%;
     transition: all 0.3s ease;
@@ -75,7 +79,7 @@
     transition: all 0.3s ease;
 }
 
-/* Button Styling */
+/* General Button Styling */
 
 .btn {
     background-color: #000;
@@ -90,4 +94,39 @@
 
 .btn:focus {
     outline: none;
+}
+
+/* Next Button Styling */
+.btn-dark {
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.btn-dark:hover {
+    background-color: #333; 
+    color: #fff;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease; 
+}
+
+/* Previous Button Styling */
+.btn-light {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.btn-light:hover {
+    background-color: #f2f2f2; 
+    color: #000;
+    border: 1px solid #000;
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: all 0.3s ease;
+}
+
+.button-group .btn {
+    margin: 0 3px;
 }

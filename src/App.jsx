@@ -36,16 +36,24 @@ function App() {
     }
   }
 
+  // Implementa funció prevStep
+  const prevStep = () => {
+    if (step > 0) {
+      setStep(prev => prev - 1)
+    }
+  }
+
   return (
     <div>
       <Card
-        image={tutorialData[step].image}
-        backgroundColor={tutorialData[step].backgroundColor}
-        title={tutorialData[step].title}
-        description={tutorialData[step].description}
-        nextStep={nextStep}
-        step={step}
-        totalSteps={tutorialData.length}
+          image={tutorialData[step].image}
+          backgroundColor={tutorialData[step].backgroundColor}
+          title={tutorialData[step].title}
+          description={tutorialData[step].description}
+          prevStep={prevStep}
+          nextStep={nextStep}
+          step={step}
+          totalSteps={tutorialData.length}
       />
     </div>
   )

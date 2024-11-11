@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Card.css';
 
-function Card({ title, description, image, backgroundColor, nextStep, step, totalSteps }) {
+function Card({ title, description, image, backgroundColor, nextStep, prevStep, step, totalSteps }) {
     return (
         <div className="container my-4">
             <div className="row justify-content-center">
@@ -38,9 +38,24 @@ function Card({ title, description, image, backgroundColor, nextStep, step, tota
                                     ></span>
                                 ))}
                             </div>
-                            <button className="btn btn-dark rounded-circle" onClick={nextStep}>
-                                <FaArrowRight />
-                            </button>
+                            <div className="button-group d-flex">
+                                {step > 0 && (
+                                    <button
+                                        className="btn btn-light rounded-circle me-2"
+                                        onClick={prevStep}
+                                    >
+                                        <FaArrowLeft />
+                                    </button>
+                                )}
+                                {step < totalSteps - 1 && (
+                                    <button
+                                        className="btn btn-dark rounded-circle"
+                                        onClick={nextStep}
+                                    >
+                                        <FaArrowRight />
+                                    </button>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
