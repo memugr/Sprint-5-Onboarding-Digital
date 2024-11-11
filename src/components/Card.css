@@ -1,25 +1,45 @@
+/* General Card Styles */
+
 .card {
-    min-height: 490px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border: none; 
-    border-radius: 20px; 
+    min-height: 490px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 20px;
 }
+
+.custom-card {
+    width: 250px;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+/* Image Styling */
 
 .card-img-top img {
     object-fit: contain;
     max-height: 150px;
 }
 
-.card-footer {
-    border-top: none; 
-    background-color: black; 
-    padding: 10px 20px;
-    margin-bottom: 3ch;
+/* Card Body Styling */
+
+.card-body h5 {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
-.card-footer .dot {
-    width: 8px;
-    height: 8px;
+.card-body p {
+    font-size: 0.7rem;
+    color: #000;
+}
+
+/* Card Footer Styling */
+
+.card-footer {
+    border-top: none;
+    background-color: #000;
+    padding: 10px 20px;
+    margin-bottom: 3ch;
 }
 
 .card-footer button {
@@ -30,19 +50,44 @@
     justify-content: center;
 }
 
-.custom-card {
-    width: 250px;
-    max-width: 400px;
-    margin: 0 auto;
-    border-radius: 20px;
+/* Dot Styling */
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card-body h5 {
-    font-size: 1rem;
-    font-weight: bold;
+.dot {
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+    background-color: #D3D3D3;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
-.card-body p {
-    font-size: 0.7rem;
-    color: #555;
+.dot.active {
+    width: 15px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Button Styling */
+
+.btn {
+    background-color: #000;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
 }

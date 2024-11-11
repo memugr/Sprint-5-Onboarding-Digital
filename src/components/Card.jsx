@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Card.css'; 
+import './Card.css';
 
-function Card({ title, description, image, nextStep }) {
+function Card({ title, description, image, backgroundColor, nextStep, step, totalSteps }) {
     return (
         <div className="container my-4">
             <div className="row justify-content-center">
@@ -12,7 +12,7 @@ function Card({ title, description, image, nextStep }) {
                         <div
                             className="card-img-top d-flex align-items-center justify-content-center"
                             style={{
-                                backgroundColor: '#3fb5a3',
+                                backgroundColor: backgroundColor,
                                 height: '350px',
                                 borderTopLeftRadius: '20px',
                                 borderTopRightRadius: '20px',
@@ -31,9 +31,12 @@ function Card({ title, description, image, nextStep }) {
                         </div>
                         <div className="card-footer d-flex justify-content-between align-items-center bg-white">
                             <div className="dots">
-                                <span className="dot bg-secondary rounded-circle mx-1"></span>
-                                <span className="dot bg-secondary rounded-circle mx-1"></span>
-                                <span className="dot bg-secondary rounded-circle mx-1"></span>
+                                {Array.from({ length: totalSteps }, (_, index) => (
+                                    <span
+                                        key={index}
+                                        className={`dot ${step === index ? 'active' : ''}`}
+                                    ></span>
+                                ))}
                             </div>
                             <button className="btn btn-dark rounded-circle" onClick={nextStep}>
                                 <FaArrowRight />
