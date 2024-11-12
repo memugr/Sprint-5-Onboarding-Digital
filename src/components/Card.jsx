@@ -2,6 +2,7 @@ import React from 'react';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Card.css';
+import Indicator from "./Indicator";
 
 function Card({ title, description, image, backgroundColor, nextStep, prevStep, step, totalSteps }) {
     return (
@@ -30,14 +31,7 @@ function Card({ title, description, image, backgroundColor, nextStep, prevStep, 
                             <p className="card-text">{description}</p>
                         </div>
                         <div className="card-footer d-flex justify-content-between align-items-center bg-white">
-                            <div className="dots">
-                                {Array.from({ length: totalSteps }, (_, index) => (
-                                    <span
-                                        key={index}
-                                        className={`dot ${step === index ? 'active' : ''}`}
-                                    ></span>
-                                ))}
-                            </div>
+                            <Indicator totalSteps={totalSteps} currentStep={step} />
                             <div className="button-group d-flex">
                                 {step > 0 && (
                                     <button
@@ -49,7 +43,7 @@ function Card({ title, description, image, backgroundColor, nextStep, prevStep, 
                                 )}
                                 {step < totalSteps - 1 && (
                                     <button
-                                        className="btn btn-dark rounded-circle"
+                                        className="btn btn-dark unded-circle"
                                         onClick={nextStep}
                                     >
                                         <FaArrowRight />
