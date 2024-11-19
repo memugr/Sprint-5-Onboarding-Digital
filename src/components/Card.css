@@ -5,6 +5,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
     border-radius: 20px;
+    overflow: hidden; 
+    position: relative;
 }
 
 .custom-card {
@@ -130,3 +132,73 @@
 .button-group .btn {
     margin: 0 3px;
 }
+
+/* Card Image Container Styling */
+.image-container {
+    position: relative; 
+    overflow: hidden;   
+}
+
+/* Animations */
+@keyframes slideOutLeft {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation Classes */
+.slide-out-left {
+    animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s forwards;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s forwards;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s forwards;
+}
+
+
