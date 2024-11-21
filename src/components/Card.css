@@ -21,6 +21,16 @@
 .card-img-top img {
     object-fit: contain;
     max-height: 150px;
+    
+}
+
+.image-container {
+    height: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Card Body Styling */

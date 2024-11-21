@@ -37,13 +37,8 @@ function Card({ title, description, image, backgroundColor, nextStep, prevStep, 
                 <div className="col-12 col-md-6 col-lg-4">
                     <div className="card shadow custom-card">
                         <div
-                            className={`card-img-top d-flex align-items-center justify-content-center image-container ${animationClass}`}
-                            style={{
-                                backgroundColor: backgroundColor,
-                                height: '350px',
-                                borderTopLeftRadius: '20px',
-                                borderTopRightRadius: '20px',
-                            }}
+                            className={`card-img-top image-container ${animationClass}`}
+                            style={{ backgroundColor: backgroundColor }}
                         >
                             <img
                                 src={image}
